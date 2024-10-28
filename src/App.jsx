@@ -6,7 +6,7 @@ import Learner from './Components/Learner'
 
 function App() {
   const [count, setCount] = useState(0)
-  const learnerArray = [
+  const [learners, setLearners] = useState([
     {
       name: 'Cait Yomorta',
       bio: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus placeat nostrum explicabo? Voluptatibus expedita saepe officia optio, commodi totam ratione laudantium ipsum porro molestias, quasi nulla minus vitae laboriosam corrupti Delectus inventore explicabo est odit incidunt rem a recusandae eum pariatur. Aperiam doloremque blanditiis harum voluptate animi fugit beatae asperiores quo, dignissimos sed illum veniam eum accusantium nulla quod voluptatum',
@@ -65,12 +65,12 @@ function App() {
         }
       ]
     }
-  ]
+  ])
 
 
   return (
     <>
-   {learnerArray.map((learner, index) => (
+   {learners.map((learner, index) => (
       <Learner key={index} {...learner} />
     ))}
     </>
